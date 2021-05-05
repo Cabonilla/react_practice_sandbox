@@ -11,6 +11,11 @@ const App = () => {
     {title: 'Cat Food', amount: 300.00, date: new Date(2021, 4, 2)},
   ]
 
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense)
+  }
   // return React.createElement(
   //   'div',
   //   {},
@@ -20,7 +25,7 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses}/>
     </div>
   );
